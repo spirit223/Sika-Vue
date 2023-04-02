@@ -1,0 +1,44 @@
+{
+  "id": "3925650",
+  "name": "sika",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "357705",
+      "name": "鹿",
+      "font_class": "1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5482904",
+      "name": "公鹿",
+      "font_class": "gonglu",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "6641407",
+      "name": "鹿",
+      "font_class": "lu",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "21269628",
+      "name": "驯鹿",
+      "font_class": "031-reindeer",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
+    },
+    {
+      "icon_id": "22611545",
+      "name": "鹿",
+      "font_class": "lu1",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3925650 */
+  src: url('iconfont.woff2?t=1677717672717') format('woff2'),
+       url('iconfont.woff?t=1677717672717') format('woff'),
+       url('iconfont.ttf?t=1677717672717') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-1:before {
+  content: "\e603";
+}
+
+.icon-gonglu:before {
+  content: "\e67a";
+}
+
+.icon-lu:before {
+  content: "\e69c";
+}
+
+.icon-031-reindeer:before {
+  content: "\e6c6";
+}
+
+.icon-lu1:before {
+  content: "\e62e";
+}
+

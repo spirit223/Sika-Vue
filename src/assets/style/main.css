@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3737651 */
+  src: url('../fonts/iconfont.woff2') format('woff2'),
+       url('../fonts/iconfont.woff') format('woff'),
+       url('../fonts/iconfont.ttf') format('truetype');
+}
+
+:root {
+  /* 颜色定义 */
+  /* @todo: 修改中缀  bs-sika */
+  --preset-sika-white:#FFFFFF;
+  --preset-sika-purple:#2d307a;
+  --perset-sika-shallowpurple:#525288;
+  --preset-sika-darkpurple:#1f2040;
+  --preset-sika-whitepurple:#74759b;
+  --preset-sika-gray:#2d2e36;
+  --preset-sika-weakgray:#B5B5B5;
+  --preset-sika-whitegray:#475164;
+  --preset-sika-blue:#93b5cf;
+  --preset-sika-darkblue:#126bae;
+  --perset-sika-brightyellow:#ffca2c;
+  --perset-sika-shallowpurple:#525288;
+  --sika-darkblue:#126bae;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a{
+  color: #258aea;
+}
+
+body {
+  /* background-color: #808080; */
+  background-color: #fff;
+  color: #001826;
+}
