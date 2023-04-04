@@ -1,26 +1,48 @@
-<script setup>
-  import { ref } from 'vue'
-  import VideoPlayer from '../VideoPlayer.vue';
-  const source = 'http://43.139.39.172:65534/externalLinksController/chain/gc%E9%A3%8E%E9%AA%9A%E5%AB%82%E5%AD%90%E7%A9%BF%E4%B8%9D%E8%A2%9C%E5%8B%BE%E5%BC%95%E5%BC%9F%E5%BC%9F%E4%B9%B1%E4%BC%A6%20%E9%AB%98%E6%BD%AE%E7%88%BD%E7%9A%84%E5%90%90%E8%88%8C%E5%A4%B4%20.mp4?ckey=Ubd%2FWvL2B2%2BZZmSn3NoFmNasxLAv2dh1vrb2FRFG9gGDDc%2Bs%2FjF0kLZ2n32FoM7y'
-  const videoOptions = ref({
-    autoplay: true,
-    controls: true,
-    sources: [
-      {
-        src:
-          source,
-          type: 'video/mp4'
-      }
-    ]
-  })
-</script>
-
 <template>
-  <div>
-    <video-player :options="videoOptions" />
+  <div class="video-wrap">
+    <video-player
+      :options="videoOptions"
+      controls
+      class="sika-video"
+    />
   </div>
 </template>
 
-<style lang="css">
+<script setup>
+  import { defineComponent, ref, onBeforeMount } from 'vue'
+  import { VideoPlayer } from '@videojs-player/vue'
+  import 'video.js/dist/video-js.css'
+  import axios from 'axios'
+  const videoSrc = ref()
+  // todo 调用后端获取视频连接
+  onBeforeMount(()=>{
+    videoSrc.value = 'http://43.139.39.172:65534/externalLinksController/chain/22.%E6%B6%88%E6%81%AF%E6%B6%88%E8%B4%B9%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B.mp4?ckey=oHotf5UI6o7kB1pXeBBIiksMBgGFCP3YIeCaWOq19uyLf24%2BcwMPmJBlANw28WOn'
+  })
+  
+  const videoOptions = ref({
+    playbackRates: [0.7, 1.0, 1.5, 2.0], // 播放速度
+    autoplay: false, // 加载完成后是否自动播放
+    muted: true, // 是否静音。
+    loop: false, // 是否循环播放
+    preload: 'auto', // 建议浏览器在<video>加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）
+    language: 'zh-CN',
+    aspectRatio: '16:9', // 宽高比例
+    fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
+    src: videoSrc,
+    notSupportedMessage: '视频无法播放, 请联系管理人员',
+    volume:"0.6"
+  })
+  defineComponent({
+    components: {
+      VideoPlayer
+    }
+  })
+</script>
 
+<style lang="css">
+.video-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
